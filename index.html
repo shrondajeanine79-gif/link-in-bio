@@ -31,6 +31,18 @@
         .bg-glow-1 { background: #ca8a04; top: 10%; left: 15%; } 
         .bg-glow-2 { background: #db2777; bottom: 10%; right: 15%; }
 
+        /* Keyframes for the elegant fade-in glide animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .container {
             position: relative;
             z-index: 10;
@@ -44,6 +56,9 @@
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.08);
             box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4);
+            
+            /* Apply smooth fade-in entry animation to the whole container card */
+            animation: fadeInUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
         }
 
         .profile-pic {
@@ -68,21 +83,35 @@
         .bio {
             color: rgba(255, 255, 255, 0.65);
             font-size: 0.95rem;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             line-height: 1.4;
+        }
+
+        /* Clean Section Headers Styles */
+        .section-title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.45);
+            margin: 25px 0 12px 0;
+            text-align: left;
+            padding-left: 5px;
+            font-weight: 700;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding-bottom: 6px;
         }
 
         .links-container {
             display: flex;
             flex-direction: column;
-            gap: 14px;
+            gap: 12px;
         }
 
         .link-btn {
             display: block;
             color: #ffffff;
             text-decoration: none;
-            padding: 15px;
+            padding: 14px;
             border-radius: 14px;
             font-weight: 600;
             font-size: 0.95rem;
@@ -163,38 +192,28 @@
     <div class="bg-glow-2"></div>
 
     <div class="container">
-        <!-- Links directly to your uploaded profile picture file name -->
+        <!-- Profile Picture File -->
         <img src="profilepic.jpg" alt="On Purpose With Purpose Profile Picture" class="profile-pic">
         
         <h1>On Purpose With Purpose</h1>
         <p class="bio">Living Intentionally, Creating Daily, Leading with Heart.<br><br>Welcome to my space! I design content centered around personal growth, meaningful connections, and living every day with intention.</p>
         
         <div class="links-container">
-            <!-- 1. YouTube Link -->
+            <!-- SECTION 1: CONTENT & SOCIAL MEDIA -->
+            <div class="section-title">Content & Social Media</div>
+            
             <a href="https://youtube.com" class="link-btn youtube-btn" target="_blank">📺 YouTube Channel</a>
-            
-            <!-- 2. Facebook Link -->
-            <a href="https://www.facebook.com/ShrondaJeanineG/" class="link-btn facebook-btn" target="_blank">📘 Facebook Connection</a>
-
-            <!-- 3. New Facebook Subscription Link -->
-            <a href="https://www.facebook.com/ShrondaJeanineG/subscribe/" class="link-btn fb-sub-btn" target="_blank">⭐ Support Me on Facebook</a>
-            
-            <!-- 4. LinkedIn Link -->
-            <a href="https://linkedin.com" class="link-btn linkedin-btn" target="_blank">💼 LinkedIn Profile</a>
-            
-            <!-- 5. Instagram Link -->
+            <a href="https://facebook.com" class="link-btn facebook-btn" target="_blank">📘 Facebook Connection</a>
             <a href="https://instagram.com" class="link-btn instagram-btn" target="_blank">📸 Instagram Feed</a>
-            
-            <!-- 6. TikTok Link -->
             <a href="https://tiktok.com" class="link-btn tiktok-btn" target="_blank">🎵 TikTok Videos</a>
+            <a href="https://linkedin.com" class="link-btn linkedin-btn" target="_blank">💼 LinkedIn Profile</a>
 
-            <!-- 7. Ko-fi Support Link -->
+            <!-- SECTION 2: SUPPORT & MONETIZATION -->
+            <div class="section-title">Support & Monetization</div>
+            
+            <a href="https://facebook.comsubscribe/" class="link-btn fb-sub-btn" target="_blank">⭐ Support Me on Facebook</a>
             <a href="https://ko-fi.com" class="link-btn kofi-btn" target="_blank">☕ Support Me on Ko-fi</a>
-            
-            <!-- 8. Direct Email Connection Button -->
             <a href="mailto:shronda779@gmail.com" class="link-btn email-btn">✉️ Contact Me Directly</a>
-            
-            <!-- 9. GitHub Link -->
             <a href="https://github.com" class="link-btn github-btn" target="_blank">💻 GitHub Code Archive</a>
         </div>
     </div>
